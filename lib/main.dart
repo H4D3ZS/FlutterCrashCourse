@@ -10,7 +10,30 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(),
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          title: Text(
+            "Crash Course",
+            style: TextStyle(color: Colors.amber),
+          ),
+        ),
+        body: Center(
+          child: Container(
+            child: Text("Hello World"),
+          ),
+        ),
+        bottomNavigationBar: BottomNavigationBar(items: [
+          BottomNavigationBarItem(
+            label: 'Home',
+            icon: Icon(Icons.home),
+          ),
+          BottomNavigationBarItem(
+            label: 'Settings',
+            icon: Icon(Icons.settings),
+          ),
+        ]),
+      ),
     );
   }
 }
